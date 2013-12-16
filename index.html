@@ -5,16 +5,13 @@
     <script src="client/app.js"></script>
   </head>
   <body ng-app="problemFinderApp">
-    <div ng-controller="submitProblem">
-      <input type="text" required />
-      <input type="submit" />
-      <p>{{sampleProblem}}</p>
-    </div>
 
-    <script>
-      var dataRef = new Firebase("https://problemfinder.firebaseio.com");
-      // dataRef.push("I found a problem!");
-    </script>
+    <div ng-controller="submitProblem">
+      <form ng-submit="saveProblem()">
+        <input type="text" ng-model="newProblem" required />
+        <input type="submit" />
+      </form>
+    </div>
 
   </body>
 </html>
