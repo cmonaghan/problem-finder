@@ -1,7 +1,8 @@
 <html>
   <head>
-    <script src="https://cdn.firebase.com/v0/firebase.js"></script>
     <script src="lib/angular.min.js"></script>
+    <script src="https://cdn.firebase.com/v0/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/0.5.0/angularfire.min.js"></script>
     <script src="client/app.js"></script>
   </head>
   <body ng-app="problemFinderApp">
@@ -12,6 +13,14 @@
         <input type="submit" />
       </form>
     </div>
+
+<!--     <div ng-controller="problemView">
+      <ul>
+        <li ng-repeat="problem in problems track by problem.id">
+          {{problem}}
+        </li>
+      </ul>
+    </div> -->
 
   </body>
 </html>

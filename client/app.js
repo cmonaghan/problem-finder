@@ -1,9 +1,14 @@
-// connects app to firebase
-var firebase = new Firebase("https://problemfinder.firebaseio.com");
+angular.module('problemFinderApp', ['firebase'])
+.controller('submitProblem', function($scope, $firebase){
 
-angular.module('problemFinderApp', [])
-.controller('submitProblem', function($scope){
+  var ref = new Firebase("https://problemfinder.firebaseio.com/problemList");
+  $scope.problemList = $firebase(ref);
+
   $scope.saveProblem = function(){
-    firebase.push(this.newProblem);
+    $scope.problemList.$add({body: $scope.newProblem})
+    $scope.newProblem = '';
   }
 });
+// .controller('problemView', function($scope){
+
+// });
