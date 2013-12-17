@@ -19,15 +19,23 @@
 
       <div ng-controller="submitProblem">
         <form ng-submit="saveProblem()">
-          <textarea type="text" ng-model="newProblem" ng-maxlength="140" required></textarea>
+          <textarea type="text" ng-model="newProblem" ng-maxlength="140" placeholder="Submit a problem in 140 characters or less" required></textarea>
           <br />
           <input type="submit" />
         </form>
       </div>
 
       <div ng-controller="problemView">
+        <div class="filters">
+          Sort By:
+          <span>Votes</span>
+          <span>Most Recent</span>
+        </div>
+        <div>
+          Filter by Keyword: <input type="text" ng-model="searchText" />
+        </div>
         <ul>
-          <li ng-repeat="problem in problemList">
+          <li ng-repeat="problem in problemList | filter:searchText">
             <span class="voteContainer">
               <img class="arrowImg" src="style/arrow.png" ng-Click="upvote()" />
               <span class="voteCount">{{problem.voteCount}}</span>
