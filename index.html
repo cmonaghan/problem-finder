@@ -28,7 +28,11 @@
       <div ng-controller="problemView">
         <ul>
           <li ng-repeat="problem in problemList">
-            {{problem.body}}
+            <span class="voteContainer">
+              <img class="arrowImg" src="style/arrow.png" ng-Click="upvote()" />
+              <span class="voteCount">{{problem.voteCount}}</span>
+            </span>
+            <span class="problemBody">{{problem.body}}</span>
           </li>
         </ul>
       </div>

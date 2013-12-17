@@ -69,3 +69,57 @@ textarea {
   margin: 20px auto 10px auto;
   background-color: #A6EBFF;
 }
+
+.voteContainer {
+  float: left;
+}
+
+.arrowImg {
+  width:15px;
+  height:20px;
+  display: block;
+  margin: 5px 5px 0px 5px;
+}
+
+.voteCount {
+  display: block;
+  font-weight: bold;
+}
+
+.problemBody {
+  margin: auto 0px auto 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
