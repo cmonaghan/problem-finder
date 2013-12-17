@@ -17,5 +17,9 @@ angular.module('problemFinderApp', ['firebase'])
   $scope.upvote = function(){
     this.problem.voteCount += 1;
     $scope.problemList.$save();
-  }
+  };
+
+  $scope.addCommentField = function(){
+    console.log('addProblemField was triggered');
+  };
 });
