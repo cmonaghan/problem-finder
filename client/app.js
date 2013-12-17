@@ -12,7 +12,9 @@ angular.module('problemFinderApp', ['firebase'])
 })
 .controller('problemView', function($scope, $firebase){
   $scope.problemList = $firebase(ref);
+
   $scope.upvote = function(){
-    console.log('something was clicked');
+    this.problem.voteCount += 1;
+    $scope.problemList.$save();
   }
 });
