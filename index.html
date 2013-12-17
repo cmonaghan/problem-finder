@@ -38,16 +38,26 @@
             Filter by Keyword: <input type="text" ng-model="searchText" />
           </span>
         </div>
-        <ul>
-          <li ng-repeat="problem in problemList | orderByPriority | orderBy:selectOrder:true | filter:searchText">
+
+        <div class="problem" ng-repeat="problem in problemList | orderByPriority | orderBy:selectOrder:true | filter:searchText">
+          <span class="voteContainer">
+            <img class="arrowImg" src="style/arrow.png" ng-Click="upvote()" />
+            <span class="voteCount">{{problem.voteCount}}</span>
+          </span>
+          <span class="problemBody">{{problem.body}}</span>
+          <span class="comment"><a href="" ng-click="addCommentField()">Comment</a></span>
+
+          <div class="problem" ng-repeat="comment in commentList">
             <span class="voteContainer">
               <img class="arrowImg" src="style/arrow.png" ng-Click="upvote()" />
-              <span class="voteCount">{{problem.voteCount}}</span>
+              <span class="voteCount">{{comment.voteCount}}</span>
             </span>
-            <span class="problemBody">{{problem.body}}</span>
-            <span class="comment"><a href="" ng-click="addCommentField()">Comment</a></span>
-          </li>
-        </ul>
+            <span class="problemBody">{{comment.body}}</span>
+          </div>
+
+        </div>
+
+
       </div>
 
     </div>

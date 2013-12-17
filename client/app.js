@@ -6,20 +6,23 @@ angular.module('problemFinderApp', ['firebase'])
 
   $scope.saveProblem = function(){
     var timestamp = new Date();
-    $scope.problemList.$add({body: $scope.newProblem, dateAdded: timestamp, voteCount: 0})
+    $scope.problemList.$add({body: $scope.newProblem, dateAdded: timestamp, voteCount: 0, comments: {body: 'Here is a test comment', dateAdded: new Date(), voteCount: 0} });
     $scope.newProblem = '';
   };
 })
 .controller('problemView', function($scope, $firebase){
   $scope.problemList = $firebase(ref);
-  $scope.filters = {};
 
   $scope.upvote = function(){
     this.problem.voteCount += 1;
     $scope.problemList.$save();
   };
-
-  $scope.addCommentField = function(){
-    console.log('addProblemField was triggered');
-  };
 });
+// .controller('commentView', function($scope, $firebase){
+//   $scope.commentList = this.problem.comments;
+//   console.log($scope.commentList);
+
+//   $scope.addCommentField = function(){
+//     console.log('addCommentField was triggered');
+//   };
+// })
