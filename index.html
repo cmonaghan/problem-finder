@@ -26,16 +26,21 @@
       </div>
 
       <div ng-controller="problemView">
-        <div class="filters">
+<!--         <div class="filters">
           Sort By:
           <span>Votes</span>
           <span>Most Recent</span>
-        </div>
+        </div> -->
+        <select ng-model = "selectOrder" >
+          <option value = "voteCount" selected>Votes</option>
+          <option value = "dateAdded">Most Recent</option>
+        </select>
+
         <div>
           Filter by Keyword: <input type="text" ng-model="searchText" />
         </div>
         <ul>
-          <li ng-repeat="problem in problemList | orderByPriority | filter:searchText">
+          <li ng-repeat="problem in problemList | orderByPriority | orderBy:selectOrder:true | filter:searchText">
             <span class="voteContainer">
               <img class="arrowImg" src="style/arrow.png" ng-Click="upvote()" />
               <span class="voteCount">{{problem.voteCount}}</span>
