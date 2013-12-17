@@ -1,3 +1,44 @@
+@font-face {
+  font-family: Quicksand;
+  src: url('fonts/quicksand/Quicksand-Regular.otf');
+}
+
+@font-face {
+  font-family: Quicksand;
+  font-weight: bold;
+  src: url('fonts/quicksand/Quicksand-Bold.otf');
+}
+
+@font-face {
+  font-family: Gesso;
+  src: url('fonts/Gesso/GESSO___.ttf');
+}
+
+body {
+  text-align: center;
+}
+
+#container {
+  font-family: Quicksand, sans-serif;
+  width: 800px;
+  display: inline-block;
+}
+
 h1 {
-  color: blue;
+  font-family: Gesso;
+  font-size: 5em;
+  margin: 80px;
+}
+
+h2, h3 {
+  font-family: Quicksand, sans-serif;
+  margin: 40px;
+}
+
+h2 {
+  font-weight: bold;
+}
+
+ul {
+  list-style-type: none;
 }

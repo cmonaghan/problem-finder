@@ -5,28 +5,34 @@
     <script src="https://cdn.firebase.com/libs/angularfire/0.5.0/angularfire.min.js"></script>
     <script src="client/app.js"></script>
 
+    <link rel="stylesheet" type="text/css" href="bower_components/normalize-css/normalize.css">
     <link rel="stylesheet" type="text/css" href="style/dist/css/bootstrap-theme.css" />
     <link rel="stylesheet" type="text/css" href="style/dist/css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="style/style.css" />
   </head>
   <body ng-app="problemFinderApp">
+    <div id="container">
 
-    <h1>Help entrepreneurs solve real problems</h1>
-    <h2>Have you ever found something particularly annoying, but didn't know how to fix it? Share your idea with others and brainstorm solutions.</h2>
-    <div ng-controller="submitProblem">
-      <form ng-submit="saveProblem()">
-        <textarea type="text" ng-model="newProblem" ng-maxlength="140" required></textarea>
-        <input type="submit" />
-      </form>
+      <h1>Problem Finder</h1>
+      <h2>Help entrepreneurs solve real problems</h2>
+      <h3>Have you ever found something particularly annoying, but didn't know how to fix it? Share your ideas with others and brainstorm solutions.</h3>
+
+      <div ng-controller="submitProblem">
+        <form ng-submit="saveProblem()">
+          <textarea type="text" ng-model="newProblem" ng-maxlength="140" required></textarea>
+          <br />
+          <input type="submit" />
+        </form>
+      </div>
+
+      <div ng-controller="problemView">
+        <ul>
+          <li ng-repeat="problem in problemList">
+            {{problem.body}}
+          </li>
+        </ul>
+      </div>
+
     </div>
-
-    <div ng-controller="problemView">
-      <ul>
-        <li ng-repeat="problem in problemList">
-          {{problem.body}}
-        </li>
-      </ul>
-    </div>
-
   </body>
 </html>
