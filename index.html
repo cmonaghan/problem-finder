@@ -26,18 +26,17 @@
       </div>
 
       <div ng-controller="problemView">
-<!--         <div class="filters">
-          Sort By:
-          <span>Votes</span>
-          <span>Most Recent</span>
-        </div> -->
-        <select ng-model = "selectOrder" >
-          <option value = "voteCount" selected>Votes</option>
-          <option value = "dateAdded">Most Recent</option>
-        </select>
-
-        <div>
-          Filter by Keyword: <input type="text" ng-model="searchText" />
+        <div class="filters">
+          <span>
+            Sort By:
+            <select ng-model="selectOrder">
+              <option value="voteCount">Votes</option>
+              <option value="dateAdded">Most Recent</option>
+            </select>
+          </span>
+          <span>
+            Filter by Keyword: <input type="text" ng-model="searchText" />
+          </span>
         </div>
         <ul>
           <li ng-repeat="problem in problemList | orderByPriority | orderBy:selectOrder:true | filter:searchText">
