@@ -16,6 +16,8 @@
 
 body {
   text-align: center;
+  background-color: #51D9FF;
+  text-shadow: 1px 1px 1px #fff;
 }
 
 #container {
@@ -27,18 +29,43 @@ body {
 h1 {
   font-family: Gesso;
   font-size: 5em;
-  margin: 80px;
+  margin: 80px auto 40px auto;
 }
 
 h2, h3 {
   font-family: Quicksand, sans-serif;
-  margin: 40px;
+  margin: 20px;
 }
 
 h2 {
   font-weight: bold;
 }
 
+h3 {
+  font-size: 1.5em;
+}
+
 ul {
   list-style-type: none;
+  font-size: 1.2em;
+  margin-top: 50px;
+}
+
+li {
+  height: 50px;
+  margin: 10px;
+  background-color: #FFE3A3;
+  -webkit-box-shadow: 1px 2px 2px #FFD87C;
+  -moz-box-shadow: 1px 2px 2px #FFD87C;
+  box-shadow: 1px 2px 2px #FFD87C;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+
+textarea {
+  width: 400px;
+  height: 70px;
+  margin: 20px auto 10px auto;
+  background-color: #A6EBFF;
 }
