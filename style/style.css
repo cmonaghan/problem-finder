@@ -16,7 +16,7 @@
 
 body {
   text-align: center;
-  background-color: #51D9FF;
+  background-image: url('background.png');
   text-shadow: 1px 1px 1px #fff;
 }
 
@@ -68,7 +68,7 @@ textarea {
   width: 400px;
   height: 70px;
   margin: 20px auto 10px auto;
-  background-color: #A6EBFF;
+  /*background-color: #FFE3A3;*/
 }
 
 .voteContainer {
