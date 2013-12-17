@@ -35,7 +35,7 @@
           Filter by Keyword: <input type="text" ng-model="searchText" />
         </div>
         <ul>
-          <li ng-repeat="problem in problemList | filter:searchText">
+          <li ng-repeat="problem in problemList | orderByPriority | filter:searchText">
             <span class="voteContainer">
               <img class="arrowImg" src="style/arrow.png" ng-Click="upvote()" />
               <span class="voteCount">{{problem.voteCount}}</span>
