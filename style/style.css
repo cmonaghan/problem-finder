@@ -29,7 +29,7 @@ body {
 h1 {
   font-family: Gesso;
   font-size: 5em;
-  margin: 80px auto 40px auto;
+  margin: 40px auto 40px auto;
 }
 
 h2, h3 {
@@ -68,7 +68,7 @@ textarea {
   width: 400px;
   height: 70px;
   margin: 20px auto 10px auto;
-  /*background-color: #FFE3A3;*/
+  resize: none;
 }
 
 .voteContainer {

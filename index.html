@@ -26,6 +26,7 @@
       </div>
 
       <div ng-controller="problemView">
+
         <div class="filters">
           <span>
             Sort By:
@@ -38,6 +39,7 @@
             Filter by Keyword: <input type="text" ng-model="searchText" />
           </span>
         </div>
+
         <ul>
           <li ng-repeat="problem in problemList | orderByPriority | orderBy:selectOrder:true | filter:searchText">
             <span class="voteContainer">
@@ -48,6 +50,7 @@
             <span class="comment"><a href="" ng-click="addCommentField()">Comment</a></span>
           </li>
         </ul>
+
       </div>
 
     </div>
